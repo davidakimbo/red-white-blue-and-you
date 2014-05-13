@@ -1,0 +1,17 @@
+body {
+  background-color: #316A80;
+}
+
+h1 {
+  font-size: 2em;
+  color: white;
+}
+
+#container {
+  margin: 0 auto;
+  width: 80%;
+  background-color: red;
+}
+
+
+/* media-queries */

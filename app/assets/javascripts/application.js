@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function searchFunction() {
+  //zip code
+  var zipCode = $('#search-box').val()
+  var apikey = "3d6c0c31357d497a85e301eb4955c42c";
+
+  var sunlightUrl = "http://congress.api.sunlightfoundation.com/legislators/locate?zip=" + zipCode + "&apikey=" + apikey;
+
+  var response = $.ajax({
+    url: sunlightUrl,
+    method: 'get',
+    dataType: 'json'
+  }).done(function(data){ //data already represents response.responseJSON
+      console.log(data.results);
+  });
+
+}
+
+
+$(document).ready(function() {
+
+  //Search
+  $('#search-button').click(searchFunction);
+
+
+});
