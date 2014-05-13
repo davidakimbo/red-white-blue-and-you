@@ -18,4 +18,6 @@ There's a lot of citizen apathy in the political system and what I hope to ameli
 * New York Times API
 * OpenSecrets
 
-**ERD**
+**ERD and Trello**
+<https://www.dropbox.com/s/i82qimpu5kdaokf/Red%20White%20Blue%20and%20You%20-%20ERD.png>
+<https://trello.com/b/5EfZ0jM9/red-white-blue-and-you>
