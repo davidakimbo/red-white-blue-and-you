@@ -3,15 +3,36 @@ body {
 }
 
 h1 {
-  font-size: 2em;
-  color: white;
+  font-size: 1px;
+  text-shadow: gray 2px 2px;
+  color: red;
+}
+
+.hidden {
+  display: none;
 }
 
 #container {
+  padding: 5px;
   margin: 0 auto;
   width: 80%;
-  background-color: red;
+  background-color: white;
 }
 
+#search-results {
+  color: blue;
+}
+
+#first-name {
+  font-size: 2em;
+}
+
+#last-name {
+  font-size: 2em;
+}
+
+#birthday {
+  font-size: 1.5em;
+}
 
 /* media-queries */

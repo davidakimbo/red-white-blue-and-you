@@ -17,7 +17,7 @@
 
 function searchFunction() {
   //zip code
-  var zipCode = $('#search-box').val()
+  var zipCode = $('#search-box').val();
   var apikey = "3d6c0c31357d497a85e301eb4955c42c";
 
   var sunlightUrl = "http://congress.api.sunlightfoundation.com/legislators/locate?zip=" + zipCode + "&apikey=" + apikey;
@@ -28,6 +28,12 @@ function searchFunction() {
     dataType: 'json'
   }).done(function(data){ //data already represents response.responseJSON
       console.log(data.results);
+      $('#search-results').removeClass('hidden');
+      $('#search-box, #search-button').addClass('hidden');
+      var politicianInfo = data.results[0];
+      $('<div id="first-name">').text(politicianInfo.first_name).appendTo('#search-results');
+      $('<div id="last-name">').text(politicianInfo.last_name).appendTo('#search-results');
+      $('<div id="birthday">').text(politicianInfo.birthday).appendTo('#search-results');
   });
 
 }
