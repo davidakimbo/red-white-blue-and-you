@@ -8,10 +8,6 @@ h1 {
   color: red;
 }
 
-.hidden {
-  display: none;
-}
-
 #container {
   padding: 5px;
   margin: 0 auto;

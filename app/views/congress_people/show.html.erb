@@ -1,0 +1,27 @@
+<% if @results %>
+<div id="results">
+  <h2><%= @results["results"][0]["first_name"] %>
+  <% if @results["results"][0]["nickname"] %>
+    "<%= @results["results"][0]["nickname"] %>"
+  <% end %>
+    <%= @results["results"][0]["last_name"] %></h2>
+
+  <p>
+    <strong>Title:</strong> <%= @results["results"][0]["title"] %><br>
+    <strong>Chamber:</strong> <%= @results["results"][0]["chamber"].capitalize %><br>
+    <strong>District:</strong> <%= @results["results"][0]["district"] %><br>
+    <strong>Currently in Office:</strong> <%= @results["results"][0]["in_office"] %><br>
+    <strong>State:</strong> <%= @results["results"][0]["state_name"] %><br>
+    <strong>Term:</strong> <%= @results["results"][0]["term_start"] %> - <%= @results["results"][0]["term_end"] %>
+  </p>
+  <p>
+    <strong>Office:</strong> <%= @results["results"][0]["office"] %><br>
+    <strong>Phone:</strong> <%= @results["results"][0]["phone"] %><br>
+     <strong>Contact:</strong> <%= @results["results"][0]["contact_form"] %><br>
+      <strong>Website:</strong> <a href="<%= @results["results"][0]["website"] %>"> </a><br>
+  </p>
+</div>
+
+<% else %>
+  <%= @error_msg %>
+<% end %>

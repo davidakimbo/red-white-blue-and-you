@@ -51,10 +51,10 @@ function searchFunction() {
 // $(results).appendTo("#search-results")
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  //Search
-  $('#search-button').click(searchFunction);
+//   //Search
+//   $('#search-button').click(searchFunction);
 
 
-});
+// });
