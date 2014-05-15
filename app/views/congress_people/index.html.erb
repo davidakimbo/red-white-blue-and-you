@@ -1,7 +1,4 @@
-<input type="text" id="search-box" placeholder="Your Zip Code here">
-<button id="search-button">Search!</button>
-<div id="search-results" class="hidden">
-
-
-</div>
-<%= render @congress_person %>
+<%= form_tag("/show", method: "get") do %>
+  <%= text_field_tag :congress_people, nil, placeholder: "Your zip code here", size: 10 %>
+  <%= submit_tag("Search!") %>
+<% end %>

@@ -38,6 +38,18 @@ function searchFunction() {
 
 }
 
+// Build a template string
+// <div class="politician">
+// <span><%= birthday %></span>
+// </div>
+
+// pass that string into the underscore template function
+// var politicianTemplate = _.template(thatString)
+
+// call that function with an object that has the info on it
+// var results = politicianTemplate(politicianInfo);
+// $(results).appendTo("#search-results")
+
 
 $(document).ready(function() {
 
