@@ -1,15 +1,16 @@
 <% if @results %>
-<div id="results">
+<div class="search-results shadow">
   <h2><%= @results["results"][0]["first_name"] %>
   <% if @results["results"][0]["nickname"] %>
     "<%= @results["results"][0]["nickname"] %>"
   <% end %>
     <%= @results["results"][0]["last_name"] %></h2>
-
   <p>
     <strong>Title:</strong> <%= @results["results"][0]["title"] %><br>
     <strong>Chamber:</strong> <%= @results["results"][0]["chamber"].capitalize %><br>
+    <% if @results["results"][0]["district"] %>
     <strong>District:</strong> <%= @results["results"][0]["district"] %><br>
+    <% end %>
     <strong>Currently in Office:</strong> <%= @results["results"][0]["in_office"] %><br>
     <strong>State:</strong> <%= @results["results"][0]["state_name"] %><br>
     <strong>Term:</strong> <%= @results["results"][0]["term_start"] %> - <%= @results["results"][0]["term_end"] %>
@@ -17,11 +18,73 @@
   <p>
     <strong>Office:</strong> <%= @results["results"][0]["office"] %><br>
     <strong>Phone:</strong> <%= @results["results"][0]["phone"] %><br>
-     <strong>Contact:</strong> <%= @results["results"][0]["contact_form"] %><br>
-      <strong>Website:</strong> <a href="<%= @results["results"][0]["website"] %>"> </a><br>
+    <strong>Contact:</strong> <a href="<%= @results["results"][0]["contact_form"] %>"><%= @results["results"][0]["first_name"] %></a>
   </p>
+  <p>
+    <strong>Website:</strong> <a href="<%= @results["results"][0]["website"] %>"><%= @results["results"][0]["first_name"] %>'s Website </a><br>
+    <strong>Twitter:</strong> <a href="http://www.twitter.com/<%= @results["results"][0]["twitter_id"] %>"><%= @results["results"][0]["first_name"] %>'s Twitter </a><br>
+    <strong>Facebook:</strong> <a href="http://www.facebook.com/<%= @results["results"][0]["facebook_id"] %>"><%= @results["results"][0]["first_name"] %>'s Facebook </a><br>
+</div>
+
+<div class="search-results shadow">
+  <h2><%= @results["results"][1]["first_name"] %>
+  <% if @results["results"][1]["nickname"] %>
+    "<%= @results["results"][1]["nickname"] %>"
+  <% end %>
+    <%= @results["results"][1]["last_name"] %></h2>
+
+  <p>
+    <strong>Title:</strong> <%= @results["results"][1]["title"] %><br>
+    <strong>Chamber:</strong> <%= @results["results"][1]["chamber"].capitalize %><br>
+    <% if @results["results"][1]["district"] %>
+    <strong>District:</strong> <%= @results["results"][1]["district"] %><br>
+    <% end %>
+    <strong>Currently in Office:</strong> <%= @results["results"][1]["in_office"] %><br>
+    <strong>State:</strong> <%= @results["results"][1]["state_name"] %><br>
+    <strong>Term:</strong> <%= @results["results"][1]["term_start"] %> - <%= @results["results"][1]["term_end"] %>
+  </p>
+  <p>
+    <strong>Office:</strong> <%= @results["results"][1]["office"] %><br>
+    <strong>Phone:</strong> <%= @results["results"][1]["phone"] %><br>
+    <strong>Contact:</strong> <a href="<%= @results["results"][1]["contact_form"] %>"><%= @results["results"][1]["first_name"] %></a>
+  </p>
+  <p>
+    <strong>Website:</strong> <a href="<%= @results["results"][1]["website"] %>"><%= @results["results"][1]["first_name"] %>'s Website </a><br>
+    <strong>Twitter:</strong> <a href="http://www.twitter.com/<%= @results["results"][1]["twitter_id"] %>"><%= @results["results"][1]["first_name"] %>'s Twitter </a><br>
+    <strong>Facebook:</strong> <a href="http://www.facebook.com/<%= @results["results"][1]["facebook_id"] %>"><%= @results["results"][1]["first_name"] %>'s Facebook </a><br>
+</div>
+
+<div class="search-results shadow">
+  <h2><%= @results["results"][2]["first_name"] %>
+  <% if @results["results"][2]["nickname"] %>
+    "<%= @results["results"][2]["nickname"] %>"
+  <% end %>
+    <%= @results["results"][2]["last_name"] %></h2>
+
+  <p>
+    <strong>Title:</strong> <%= @results["results"][2]["title"] %><br>
+    <strong>Chamber:</strong> <%= @results["results"][2]["chamber"].capitalize %><br>
+    <% if @results["results"][2]["district"] %>
+    <strong>District:</strong> <%= @results["results"][2]["district"] %><br>
+    <% end %>
+    <strong>Currently in Office:</strong> <%= @results["results"][2]["in_office"] %><br>
+    <strong>State:</strong> <%= @results["results"][2]["state_name"] %><br>
+    <strong>Term:</strong> <%= @results["results"][2]["term_start"] %> - <%= @results["results"][2]["term_end"] %>
+  </p>
+  <p>
+    <strong>Office:</strong> <%= @results["results"][2]["office"] %><br>
+    <strong>Phone:</strong> <%= @results["results"][2]["phone"] %><br>
+    <strong>Contact:</strong> <a href="<%= @results["results"][2]["contact_form"] %>"><%= @results["results"][2]["first_name"] %></a>
+  </p>
+  <p>
+    <strong>Website:</strong> <a href="<%= @results["results"][2]["website"] %>"><%= @results["results"][2]["first_name"] %>'s Website </a><br>
+    <strong>Twitter:</strong> <a href="http://www.twitter.com/<%= @results["results"][2]["twitter_id"] %>"><%= @results["results"][2]["first_name"] %>'s Twitter </a><br>
+    <strong>Facebook:</strong> <a href="http://www.facebook.com/<%= @results["results"][2]["facebook_id"] %>"><%= @results["results"][2]["first_name"] %>'s Facebook </a><br>
 </div>
 
 <% else %>
-  <%= @error_msg %>
+  <center>
+  <%= image_tag "america.jpg" %><br>
+  <h2><%= @error_msg %></h2>
+  </center>
 <% end %>

@@ -1,4 +1,12 @@
-<%= form_tag("/show", method: "get") do %>
-  <%= text_field_tag :congress_people, nil, placeholder: "Your zip code here", size: 10 %>
-  <%= submit_tag("Search!") %>
-<% end %>
+<div id="search-page">
+  <%= form_tag("/show", method: "get") do %>
+    <%= text_field_tag :congress_people, nil, placeholder: "Your zip code here", size: 10 %>
+    <%= submit_tag("Search!") %>
+  <% end %>
+  <ul id="description-list">
+    <h2>What's the deal with Red White Blue and You?</h2>
+    <li><h2>Government Dissatisfaction</h2><p>Congress has a 90% incumbancy rate yet has only a <em>15</em>% approval rating. How do our politicians keep their jobs?</p></li>
+    <li><h2>Congressional Transparency</h2><p>Many Americans do not know who represents them in Congress.</p></li>
+    <li><h2>Corporations love Politicians</h2><p>Corporate money influences many facets </p></li>
+  </ul>
+</div>
